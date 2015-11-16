@@ -1,0 +1,19 @@
+<html>
+<head>
+  <title>Movie Lovers</title>
+</head>
+<body>
+  <center>
+    <h1>Movie Trivia</h1>
+      <p id="profile-name" class="profile-name-card"></p>
+        <form action="/images" method="POST" enctype="multipart/form-data">
+            <input type="file" class="form-control" name="file">
+            <input type="text" value="<%= @gallery %>" name="array" hidden>
+        </form>
+        <% if @movie_arr != nil 
+            @movie_arr.each do |movie| %>
+        <a href="./images/<%= item %>.png"><img src="./thumbnails/<%= item %>.png" alt=""></a>
+        <%= end %>  
+  </center>
+</body>
+</html>
